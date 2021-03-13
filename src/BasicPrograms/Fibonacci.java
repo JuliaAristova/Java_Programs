@@ -12,42 +12,27 @@ The first two numbers of fibonacci series are 0 and 1.
  */
 public class Fibonacci {
 
-    public static void printNFinbonacciNumbers(int n) {
+    public static void printNFinbonacciNumbers(int count) {
         int n1=0, n2=1, n3;
         System.out.print(n1 + " " + n2 + " ");
-        for (int i = 2; i < n ; i++) {
+        for (int i = 2; i < count ; i++) {
             n3 = n1 + n2;
             System.out.print(n3 + " ");
             n1 = n2;
             n2 = n3;
         }
     }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter how many Fibonacci numbers you want to print: ");
-        int num = scan.nextInt();
+        int count = scan.nextInt();
 
-        printNFinbonacciNumbers(num);
+        printNFinbonacciNumbers(count);
     }
 
-//        List<Integer> numbers = new ArrayList<>(Arrays.asList(0, 1, 1));
-//
-//        int i = 2;
-//        if (last == 0)
-//            System.out.println("0");
-//        else if (last == 1)
-//            System.out.println("0 1");
-//        else {
-//            while (numbers.get(i) < last) {
-//                numbers.add(i+1, numbers.get(i) + numbers.get(i - 1));
-//                i++;
-//            }
-//            System.out.println(numbers);
-//        }
-
-
-
 }
+
 
 
